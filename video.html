@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Cool Tunes</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <title>Cool Tunes</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">MEDIA PRODUCTION II</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Custom Audio Player</a></li>
+                    <li class="active"><a href="#">Custom Video Player</a></li>
+                </ul>
+            </div>
+        </nav>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">MEDIA PRODUCTION II</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="index.html">Custom Audio Player</a></li>
-      <li class="active"><a href="#">Custom Video Player</a></li>
-  </div>
-</nav>
+        <div class="container">
+            <h3>Custom HTML5 Video Player</h3>
+            <p>Hit play to check out the video!</p>
 
-<div class="container">
-  <h3>Custom HTML5 Video Player</h3>
-  <p>Hit play to check out the video!</p>
+            <div class='player'>
+                <video class="video-screen" preload='auto' msallowfullscreen webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    <source src="video/Pusheen.mp4" type=video/mp4>
+                </video>
+                <div class='controls active'>
+                    <button class='play start'></button>
+                    <input type="range" class='time-bar' value='0' min='0' max=''>
+                    <time class='time'>N/A</time>
+                    <input type="range" class='volume-bar' value='70' min='0' max='100'>
+                    <div class='speed'>
+                        <select>
+                            <option value='.5' >0.5x</option>
+                            <option value='1' selected>1x</option>
+                            <option value='2'>2x</option>
+                        </select>
+                    </div>
+                    <button class='fullscreen-button'></button>
+                </div>
 
-  <div class='player'>
-    <video class="video-screen" preload='auto' msallowfullscreen webkitallowfullscreen mozallowfullscreen allowfullscreen>
-        <source src="video/Pusheen.mp4" type=video/mp4>
-    </video>
-    <div class='controls active'>
-      <button class='play start'></button>
-      <input type="range" class='time-bar' value='0' min='0' max=''>
-      <time class='time'>N/A</time>
-      <input type="range" class='volume-bar' value='70' min='0' max='100'>
-      <div class='speed'>
-        <select>
-          <option value='.5' >0.5x</option>
-          <option value='1' selected>1x</option>
-          <option value='2'>2x</option>
-        </select>
-      </div>
-      <button class='fullscreen-button'></button>
-    </div>
+            </div>
 
-  </div>
-
-</div>
-<script src="video.js"></script>
-</body>
+        </div>
+        <script src="video.js"></script>
+    </body>
 </html>
